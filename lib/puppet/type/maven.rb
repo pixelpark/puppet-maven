@@ -39,7 +39,7 @@ Puppet::Type.newtype(:maven) do
   # err: Could not render to pson: undefined method `merge' for []:Array
   # Could not evaluate: No ability to determine if maven exists
   def self.title_patterns
-    [ [ /^(.*?)\/*\Z/m, [ [ :path, lambda{|x| x} ] ] ] ]
+    [ [ /^(.*?)\/*\Z/m, [ [ :path ] ] ] ]
   end
 
   newparam(:path) do
